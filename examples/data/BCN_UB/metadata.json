@@ -1,0 +1,29 @@
+{
+  "station": "BCN_UB",
+  "station_class": "UB",
+  "country": "ES",
+  "data_kind": "Observed PNSD after project quality control, expressed as number concentration per native size bin (Delta N), not dN/dlog10Dp.",
+  "rows": 62412,
+  "channels": 103,
+  "start": "2013-01-01 00:00:00",
+  "end": "2020-02-14 11:30:00",
+  "native_min_center_nm": 12.2,
+  "native_max_center_nm": 478.3,
+  "target_nm": [
+    17,
+    500
+  ],
+  "selected_min_center_nm": 17.5,
+  "selected_max_center_nm": 478.3,
+  "time": "Timestamps are retained from the analysis input without rounding; retain their source precision.",
+  "units": {
+    "PNSD": "cm-3 per size bin",
+    "diameter": "nm",
+    "DF": "dimensionless",
+    "LDSA": "um2 cm-3"
+  },
+  "missing_values": "Blank CSV fields are missing values; all-missing integration windows remain missing.",
+  "DF": "Corresponding MPPD-derived tabulated deposition fractions used in the study. HA=head airways; TB=tracheobronchial; ALV=alveolar. Use the tabulated Total column to reproduce the calculation; independently rounded component columns need not add exactly to Total.",
+  "source_sha256": "24ed1984bac72e72d6e08f4fa2c1154493d65e88b0a0184252ab65ac7dbb44ca",
+  "example_scope": "Complete available processed BCN_UB PNSD record. Spatial statistics use 2015-2019."
+}

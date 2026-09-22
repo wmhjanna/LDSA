@@ -1,0 +1,11 @@
+{
+  "PROJECT_ROOT": "../staged_sources/project",
+  "INPUT_ROOT": "../staged_sources/external",
+  "DELIVERY_ROOT": "../staged_sources/delivery",
+  "ATTACHMENT_ROOT": "../data/document_inputs",
+  "EXTERNAL_RESOURCE": "../data/external_resource",
+  "FONT_ROOT": "../fonts",
+  "RSCRIPT": "Rscript",
+  "PYTHON": "python",
+  "NODE_MODULES": "../node_modules"
+}

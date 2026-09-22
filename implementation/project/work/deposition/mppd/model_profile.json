@@ -1,0 +1,49 @@
+{
+  "status": "confirmed",
+  "software_name": "ARA MPPD",
+  "software_version": "3.04",
+  "parameter_evidence": "MPPD 3.04 configuration with each native diameter supplied as the particle diameter; additional settings are listed below.",
+  "diameter_interpretation": "Native PNSD mobility diameter is treated as spherical physical diameter at density 1 g/cm3; nm divided by 1000 for CMD input. GSD=1 single-size calculation.",
+  "region_mapping": {
+    "DF_head": "MPPD Head, inhalation plus exhalation",
+    "DF_TB": "MPPD TB",
+    "DF_ALV": "MPPD Pulmonary/P (project ALV/P label)",
+    "DF_total": "MPPD Total = Head + TB + P"
+  },
+  "parameters": {
+    "species_age": "Human adult (Yeh/Schum standard; no specific chronological age entered)",
+    "lung_geometry": "Yeh / Schum Symmetric",
+    "FRC_ml": 3300,
+    "upper_airway_volume_ml": 50,
+    "breathing_route": "Nasal",
+    "tidal_volume_ml": 625,
+    "breathing_frequency_min_1": 12,
+    "inspiratory_fraction": 0.5,
+    "pause_fraction": 0,
+    "particle_density_g_cm3": 1,
+    "shape_assumption": "Spherical, aspect ratio 1",
+    "hygroscopicity": "No growth; installed MPPD Particle.getHygroscopic() false",
+    "inhalability_adjustment": false,
+    "size_distribution": "Single, monodisperse; GSD diameter 1, GSD length 1, correlation 0",
+    "diameter_input_definition": "CMD in micrometres"
+  },
+  "curve_diameter_unit": "nm",
+  "df_unit": "fraction",
+  "df_definition": "fraction_of_inhaled_particles",
+  "raw_export_files": [
+    "raw_exports/direct/engine_values.csv",
+    "raw_exports/raw_file_sha256.json"
+  ],
+  "notes": "Deposition fractions are calculated directly without interpolation. This profile describes the specified calculation and does not establish identical settings for other published calculations.",
+  "execution_method": "Unmodified local MPPD3.04.jar native SetParameters/MakeTree/test classes, with native ReportCommon/ReportSingle/SaveParameters exports. Custom Java runner; not an official CLI. Six diameters cross-checked against MPPDframe Run action and LongTask worker.",
+  "additional_settings": {
+    "gravity_cm_s2": 981,
+    "body_orientation": "Upright",
+    "aerosol_concentration_mg_m3": 1,
+    "equivalent_diameter_model": false,
+    "flow_model": 0,
+    "nanoparticle_specific_axial_diffusion_switch": false,
+    "hidden_switch_evidence": "MPPD 3.04 session parameter: false.",
+    "calculation": "deposition only, constant exposure"
+  }
+}

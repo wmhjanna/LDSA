@@ -1,0 +1,21 @@
+from pathlib import Path
+import sys,json,pickle,datetime
+R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ipr_download/deps'),str(R/'work/ldsa_support/deps')]
+import pandas as pd,numpy as np,netCDF4
+V=R/'work/quality_control/verification';B=Path('@DELIVERY_ROOT@');D=B/'EBAS_observations/source_netcdf';W=R/'work/quality_control'
+a=pd.read_csv(B/'provider_quality_flags/workbook_source_flags.csv');a=a[a.scope.eq('workbook_source_inventory')&a.invalid_flag_hours.gt(0)]
+f=pd.read_csv(R/'work/provider_flag_audit/ebas_flags.csv',header=None,quotechar="'",names=['flag','description','status']);invalid=f[f.status.isin(['I','H','M'])].flag.to_numpy();masks=pickle.load(open(W/'old_qc_masks.pkl','rb'));rows=[];details=[];shiftchecks=[]
+for site,g in a.groupby('Site'):
+ s=pickle.load(open(R/'work/workbook_processing/pnsd'/f'{site}.pkl','rb'));dp=s['diameters'];bins=s['bins'];ts=pd.DatetimeIndex(s['aux'].Time);width=np.r_[np.diff(np.log10(dp)),np.diff(np.log10(dp))[-1]];orig=bins/width
+ for r in g.itertuples():
+  with netCDF4.Dataset(D/r.code/'PNSD'/r.file) as ds:
+   v=ds[r.variable];da=next(x for x in v.dimensions if x!='time');ndp=np.asarray(ds[da][:]);q=ds[r.variable+'_qc'];qa=np.asarray(np.ma.filled(q[:],0));qa=np.transpose(qa,[q.dimensions.index('time'),q.dimensions.index(da)]+[i for i,x in enumerate(q.dimensions) if x not in ['time',da]]);bad=np.isin(qa,invalid).any(2)&~(qa==100).any(2);raw=np.moveaxis(np.asarray(np.ma.filled(v[:],np.nan)),v.dimensions.index('time'),0);tv=ds['time'];ep=netCDF4.date2num(datetime.datetime(1970,1,1),tv.units);fac={'days':86400,'hours':3600,'seconds':1,'minutes':60}[tv.units.split()[0]];tt=pd.to_datetime(np.rint((np.asarray(ds['time_bnds'][:,0])-ep)*fac).astype('int64'),unit='s').round('h')
+  ix=np.abs(dp[:,None]-ndp).argmin(1);matchdp=np.isclose(dp,ndp[ix],rtol=0,atol=.001);mi=pd.Index(tt).get_indexer(ts.round('min').floor('h'));idx=np.flatnonzero(mi>=0);rr=raw[mi[idx]][:,ix];xx=orig[idx];finite=np.isfinite(xx)&np.isfinite(rr)&matchdp;agree=finite&np.isclose(xx,rr,rtol=1e-5,atol=.001);n=finite.sum(1);ratio=agree.sum(1)/np.maximum(n,1);ex=(n>=10)&(ratio>=.95);flagged=bad[mi[idx]][:,ix]&matchdp;bc=flagged&finite;selected=bc&ex[:,None]
+  rawbad=flagged.any(1);rows.append(dict(Site=site,file=r.file,dp_matches=int(matchdp.sum()),overlap_rows=len(idx),bad_rows_in_time_overlap=int(rawbad.sum()),bad_rows_with_no_original_finite=int((rawbad&~np.isfinite(xx).any(1)).sum()),bad_rows_with_any_comparable_cells=int(bc.any(1).sum()),bad_rows_with_matching_spectrum=int(selected.any(1).sum()),min_ratio_applied=float(ratio[selected.any(1)].min()) if selected.any() else None,applied_bad_cells_disagree=int((selected&~agree).sum()),unmatched_orig_diameters=','.join(map(str,dp[~matchdp]))))
+  for j in np.flatnonzero(rawbad):
+   d=dict(Site=site,file=r.file,row=int(idx[j]),Time=str(ts[idx[j]]),raw_Time=str(tt[mi[idx[j]]]),original_finite=int(np.isfinite(xx[j]).sum()),raw_finite=int(np.isfinite(rr[j]).sum()),comparable=int(n[j]),agree_ratio=float(ratio[j]),bad_comparable=int(bc[j].sum()),applied=bool(selected[j].any()),retained_finite_bins_nm=','.join(map(str,dp[np.isfinite(xx[j])&~masks[site][idx[j]]])))
+   ratio_values=xx[j]/rr[j];valid=np.isfinite(ratio_values)&(rr[j]>0)&matchdp;d['median_orig_over_raw']=float(np.median(ratio_values[valid])) if valid.any() else None;d['min_orig_over_raw']=float(np.min(ratio_values[valid])) if valid.any() else None;d['max_orig_over_raw']=float(np.max(ratio_values[valid])) if valid.any() else None;details.append(d)
+  if site=='LND_UB':
+   for off in range(-24,25):
+    mj=pd.Index(tt).get_indexer(ts.round('min').floor('h')+pd.Timedelta(hours=off));ok=mj>=0;rj=raw[mj[ok]][:,ix];xj=orig[ok];valid=np.isfinite(rj)&np.isfinite(xj)&matchdp;ag=valid&np.isclose(xj,rj,rtol=1e-4,atol=.01);counts=valid.sum(1);matching=(counts>=10)&(ag.sum(1)/np.maximum(1,counts)>=.95);shiftchecks.append(dict(offset_hours=off,matching_spectra=int(matching.sum())))
+pd.DataFrame(rows).to_csv(V/'old_masks_summary.csv',index=False);pd.DataFrame(details).to_csv(V/'old_masks_flagged_candidates.csv',index=False);pd.DataFrame(shiftchecks).to_csv(V/'LND_time_shift_check.csv',index=False);print(pd.DataFrame(rows).to_string(index=False));print('LND shifts',shiftchecks)

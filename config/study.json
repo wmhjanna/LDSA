@@ -1,0 +1,42 @@
+{
+  "network_sites": 65,
+  "geography": {
+    "Europe": 64,
+    "United States": 1
+  },
+  "integration_target_nm": [
+    17,
+    500
+  ],
+  "station_range_overrides_nm": {
+    "LND_TR": [
+      31.65,
+      500
+    ]
+  },
+  "spatial_years": [
+    2015,
+    2019
+  ],
+  "no_data_in_spatial_window": "Use the nearest available year, choosing the later year in a tie.",
+  "class_mapping": {
+    "U": "UB",
+    "F": "RB",
+    "M": "RB",
+    "P": "RB"
+  },
+  "ancillary_exclusions": {
+    "HEL_TR": [
+      "SO2"
+    ]
+  },
+  "additional_GIO_RB_excluded_UTC": [
+    "2011-07-22 10:00:00",
+    "2011-07-22 11:00:00",
+    "2011-07-22 12:00:00",
+    "2011-07-22 13:00:00"
+  ],
+  "bootstrap_seed": "20260909 + sum(utf8ToInt(group_id))",
+  "model_seed": 42,
+  "model_split": "Random weekly rows: 60% train, 20% validation, 20% test; not temporal or leave-site-out validation"
+}

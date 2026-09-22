@@ -1,0 +1,3 @@
+# Code availability
+
+Custom code used to analyse lung-deposited surface area (LDSA) across the 65-station network is provided as Supplementary Software (version 1.0.0). The package includes analysis scripts, configuration files, installation and usage instructions, and a processed BCN_UB example dataset with reference outputs for numerical verification. Project-authored code is distributed under the MIT License; third-party materials retain their applicable terms. Reproducing the full-network analyses additionally requires the source observations and ancillary datasets described in the Data availability statement.

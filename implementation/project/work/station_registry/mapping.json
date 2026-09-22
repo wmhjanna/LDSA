@@ -1,0 +1,281 @@
+[
+  {
+    "row": 36,
+    "old": "FI0050R",
+    "new": "HYY_RB",
+    "short": "HYY",
+    "station_name": "Hyytiälä",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 37,
+    "old": "FI0096G",
+    "new": "PAL_RB",
+    "short": "PAL",
+    "station_name": "Pallas",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 38,
+    "old": "FI0009R",
+    "new": "UTO_RB",
+    "short": "UTO",
+    "station_name": "Utö",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 39,
+    "old": "FI0023R",
+    "new": "VAR_RB",
+    "short": "VAR",
+    "station_name": "Värriö",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 40,
+    "old": "SE0012R",
+    "new": "ASP_RB",
+    "short": "ASP",
+    "station_name": "Aspvreten",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 41,
+    "old": "SE0021R",
+    "new": "HYL_RB",
+    "short": "HYL",
+    "station_name": "Hyltemossa",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 42,
+    "old": "SE0023R",
+    "new": "NOR_RB",
+    "short": "NOR",
+    "station_name": "Norunda Tornet",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 43,
+    "old": "SE0011R",
+    "new": "VAV_RB",
+    "short": "VAV",
+    "station_name": "Vavihill",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 44,
+    "old": "NO0001R",
+    "new": "BIR_RB",
+    "short": "BIR",
+    "station_name": "Birkenes",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 45,
+    "old": "NO0002R",
+    "new": "BIR2_RB",
+    "short": "BIR2",
+    "station_name": "Birkenes II",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 46,
+    "old": "NO0042G",
+    "new": "ZEP_RB",
+    "short": "ZEP",
+    "station_name": "Zeppelin mountain",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 47,
+    "old": "GB0036R",
+    "new": "HAR_UB",
+    "short": "HAR",
+    "station_name": "Harwell",
+    "type": "UB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 48,
+    "old": "IE0031R",
+    "new": "MAC_RB",
+    "short": "MAC",
+    "station_name": "Mace Head",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 49,
+    "old": "NL0011R",
+    "new": "CAB_RB",
+    "short": "CAB",
+    "station_name": "Cabauw Zijdeweg",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 50,
+    "old": "BE0007R",
+    "new": "TMN_RB",
+    "short": "TMN",
+    "station_name": "TMNT09 Vielsalm",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 51,
+    "old": "FR0022R",
+    "new": "OBS_RB",
+    "short": "OBS",
+    "station_name": "Observatoire Perenne de l’Environnement",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 52,
+    "old": "FR0030R",
+    "new": "PUY_RB",
+    "short": "PUY",
+    "station_name": "Puy de Dôme",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 53,
+    "old": "FR0027U",
+    "new": "VIL_UB",
+    "short": "VIL",
+    "station_name": "Villeneuve d’ Ascq",
+    "type": "UB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 54,
+    "old": "ES0100R",
+    "new": "ELA_RB",
+    "short": "ELA",
+    "station_name": "El Arenosillo",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 55,
+    "old": "ES0020U",
+    "new": "GRA_UB",
+    "short": "GRA",
+    "station_name": "Granada",
+    "type": "UB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 56,
+    "old": "ES1778R",
+    "new": "MON_RB",
+    "short": "MON",
+    "station_name": "Montseny",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 57,
+    "old": "CH0001G",
+    "new": "JUN_RB",
+    "short": "JUN",
+    "station_name": "Jungfraujoch",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 58,
+    "old": "IT0009R",
+    "new": "MON2_RB",
+    "short": "MON2",
+    "station_name": "Monte Cimone",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 59,
+    "old": "CZ0003R",
+    "new": "KOS_RB",
+    "short": "KOS",
+    "station_name": "Kosetice (NAOK)",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 60,
+    "old": "CZ0006B",
+    "new": "UST_UB",
+    "short": "UST",
+    "station_name": "Ústí n.L.-mesto",
+    "type": "UB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 61,
+    "old": "HU0002R",
+    "new": "KPU_RB",
+    "short": "KPU",
+    "station_name": "K-puszta",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 62,
+    "old": "LT0015R",
+    "new": "PRE_RB",
+    "short": "PRE",
+    "station_name": "Preila",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 63,
+    "old": "BG0001R",
+    "new": "BEO_RB",
+    "short": "BEO",
+    "station_name": "BEO Moussala",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 64,
+    "old": "GR0002R",
+    "new": "FIN_RB",
+    "short": "FIN",
+    "station_name": "Finokalia",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 65,
+    "old": "GR0101R",
+    "new": "HEL_RB",
+    "short": "HEL",
+    "station_name": "Helmos Mountain",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  },
+  {
+    "row": 66,
+    "old": "MT0001R",
+    "new": "GIO_RB",
+    "short": "GIO",
+    "station_name": "Giordan Lighthouse",
+    "type": "RB",
+    "note": "Station identifiers and configuration mapping for the study; see study metadata for coverage and provenance."
+  }
+]

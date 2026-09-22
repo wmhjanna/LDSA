@@ -1,0 +1,6 @@
+# Observed package versions; install using the R package manager.
+# R 4.5.3
+openair 2.19.0
+meta 8.2.1
+dplyr 1.2.0
+readr 2.2.0

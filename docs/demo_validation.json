@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "station": "BCN_UB",
+  "rows": 62412,
+  "channels": 103,
+  "valid_LDSA_rows": 48663,
+  "maximum_absolute_difference_um2_cm-3": 1.1368683772161603e-13,
+  "checked": [
+    "All BCN_UB timestamps and four LDSA output columns",
+    "BCN_UB 2015-2019 spatial statistics",
+    "BCN_UB change point and 75 paired-comparison months",
+    "65/53/49 coverage summaries and pairwise comparisons"
+  ],
+  "seconds": 1.483,
+  "python": "3.12.14",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "plot_font": "Times New Roman"
+}

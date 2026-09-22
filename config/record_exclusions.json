@@ -1,0 +1,52 @@
+[
+  {
+    "Site": "KOS_RB",
+    "EBAS": "CZ0003R",
+    "start_UTC": "2019-11-18 00:00:00",
+    "end_UTC_exclusive": "2019-11-25 00:00:00",
+    "rows": 168,
+    "additional_finite_records_excluded": 2,
+    "weekly_mean_before": 6590.208948654999,
+    "reason": "Manual study-specific record exclusion; applied separately from provider quality control"
+  },
+  {
+    "Site": "PAL_RB",
+    "EBAS": "FI0096G",
+    "start_UTC": "2014-01-13 00:00:00",
+    "end_UTC_exclusive": "2014-01-20 00:00:00",
+    "rows": 74,
+    "additional_finite_records_excluded": 74,
+    "weekly_mean_before": 169.97526955288123,
+    "reason": "Manual study-specific record exclusion; applied separately from provider quality control"
+  },
+  {
+    "Site": "GIO_RB",
+    "EBAS": "MT0001R",
+    "start_UTC": "2013-02-18 00:00:00",
+    "end_UTC_exclusive": "2013-02-25 00:00:00",
+    "rows": 168,
+    "additional_finite_records_excluded": 6,
+    "weekly_mean_before": 21.035098326916668,
+    "reason": "Manual study-specific record exclusion; applied separately from provider quality control"
+  },
+  {
+    "Site": "GIO_RB",
+    "EBAS": "MT0001R",
+    "start_UTC": "2013-03-25 00:00:00",
+    "end_UTC_exclusive": "2013-04-01 00:00:00",
+    "rows": 168,
+    "additional_finite_records_excluded": 9,
+    "weekly_mean_before": 19.46700513197778,
+    "reason": "Manual study-specific record exclusion; applied separately from provider quality control"
+  },
+  {
+    "Site": "GIO_RB",
+    "EBAS": "MT0001R",
+    "start_UTC": "2013-04-01 00:00:00",
+    "end_UTC_exclusive": "2013-04-08 00:00:00",
+    "rows": 168,
+    "additional_finite_records_excluded": 6,
+    "weekly_mean_before": 12.450621230333333,
+    "reason": "Manual study-specific record exclusion; applied separately from provider quality control"
+  }
+]

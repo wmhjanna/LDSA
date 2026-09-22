@@ -1,0 +1,31 @@
+{
+  "sentinel_values": [
+    999,
+    999.9,
+    9999,
+    9999.9,
+    9999.99,
+    9999.999,
+    99999,
+    99999.9,
+    99999.99,
+    99999.999,
+    999999,
+    999999.9,
+    999999.99,
+    999999.999,
+    999999.999999,
+    9999999,
+    99999999,
+    999999999
+  ],
+  "invalid_only": "Non-numeric, nonfinite, negative and exact sentinel matches become missing",
+  "zeros": "retained",
+  "statistical_extreme_filter": false,
+  "winsorization": false,
+  "imputation": false,
+  "all_observation_time_rows_preserved": true,
+  "nonobservation_rows": "Repeated header rows without timestamps are recorded in source_provenance, not treated as observations",
+  "sentinel_caveat": "One global list, not source-by-source verified; valid measurements exactly equal to a listed value may be removed",
+  "restored_count": "Prior thresholds used for counts only, never to remove values"
+}

@@ -1,0 +1,398 @@
+source_file,line,source_statement
+implementation/delivery/diagnostic_legend/render_legend.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/delivery/diagnostic_legend/render_legend.py,10,"font=FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=18)"
+implementation/delivery/diagnostic_legend/render_legend.py,18,"(D/'legendnotes.json').write_text(json.dumps({'font':'Times New Roman Bold','dpi':600,'layout':'two columns, two rows','background':'transparent','source':'@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/site_diagnostic.py','items':{'Weekly Mean':'Grey circles #95a5a6, alpha 0.5; weekly observations','Pre-Breakpoint Trend':'Red line #e74c3c','Post-Breakpoint Trend':'Blue line #2980b9','Breakpoint':'Black dashed line'}},ensure_ascii=False,indent=2))"
+implementation/delivery/figure_composition/assemble.py,13,S=Path('@ATTACHMENT_ROOT@')
+implementation/delivery/figure_composition/assemble.py,27,font=FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf')
+implementation/external/data_sources/predictive_models/LG/shap_dependence.py,79,breakpoints_file = '@INPUT_ROOT@/data_sources/predictive_models/LG/17-500LDSAbreakpoint.xlsx'
+implementation/project/nature_analysis_123.py,31,"ROOT = Path(""@PROJECT_ROOT@"")"
+implementation/project/nature_analysis_123.py,35,"LDSA_DIR = Path(""@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/clean17-500"")"
+implementation/project/nature_analysis_123.py,37,"""@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites/"""
+implementation/project/nature_analysis_123.py,40,"RAW_POLLUTANT_DIR = Path(""@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites"")"
+implementation/project/nature_analysis_123.py,42,"""@ATTACHMENT_ROOT@/"""
+implementation/project/outputs/current_analysis.json,2,"""analysis"": ""@PROJECT_ROOT@/outputs/network_analysis/analysis"","
+implementation/project/work/analyze_cleaned_ldsa.py,5,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/analyze_cleaned_ldsa.py,9,BASE=Path('@INPUT_ROOT@/data_sources')
+implementation/project/work/build_site_tables.py,17,"ROOT = Path(""@INPUT_ROOT@/data_sources"")"
+implementation/project/work/coverage_sensitivity/draw_sensitivity.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/coverage_sensitivity/draw_sensitivity.py,11,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/coverage_sensitivity/draw_sensitivity.py,12,O=Path('@PROJECT_ROOT@/outputs/coverage_sensitivity')
+implementation/project/work/coverage_sensitivity/draw_sensitivity.py,13,W=Path('@PROJECT_ROOT@/work/coverage_sensitivity')
+implementation/project/work/coverage_sensitivity/draw_sensitivity.py,15,"for f in ['Times New Roman.ttf','Times New Roman Bold.ttf']:fontManager.addfont('@FONT_ROOT@/'+f)"
+implementation/project/work/coverage_sensitivity/draw_sensitivity.py,19,"'mathtext.fontset':'custom','mathtext.rm':FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf').get_fontconfig_pattern(),'mathtext.bf':FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf').get_fontconfig_pattern(),'mathtext.it':FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf').get_fontconfig_pattern(),'mathtext.default':'regular','savefig.facecolor':'white','figure.facecolor':'white'})"
+implementation/project/work/coverage_sensitivity/draw_sensitivity.py,69,"t.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=t.get_fontsize(),weight='bold'))"
+implementation/project/work/coverage_sensitivity/draw_sensitivity.py,79,assert all(t.get_fontproperties().get_file()=='@FONT_ROOT@/Times New Roman Bold.ttf' for t in fig.findobj(mpl.text.Text) if t.get_visible() and t.get_text())
+implementation/project/work/coverage_sensitivity/prepare.py,3,"R=Path('@PROJECT_ROOT@');sys.path.insert(0,str(R/'work/ldsa_support/deps'))"
+implementation/project/work/coverage_sensitivity/prepare.py,6,D=Path('@DELIVERY_ROOT@/coverage_sensitivity');D.mkdir(exist_ok=True)
+implementation/project/work/coverage_sensitivity/prepare.py,48,"oldpath=Path('@DELIVERY_ROOT@/record_exclusion_analysis/diameter_coverage/coverage_selection.csv');old=pd.read_csv(oldpath).set_index('Site');assert set(cov.loc[cov.keep,'Site'])==set(old.index[old.keep])"
+implementation/project/work/coverage_sensitivity/sensitivity.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/coverage_sensitivity/sensitivity.py,6,ROOT=Path('@PROJECT_ROOT@');W=ROOT/'work/coverage_sensitivity'
+implementation/project/work/coverage_sensitivity/sensitivity.py,7,O=Path('@PROJECT_ROOT@/outputs/coverage_sensitivity')
+implementation/project/work/ebas_download/audit_downloads.py,5,W=Path('work/ebas_download');O=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/ebas_download/compare_local.py,6,location=Path('@DELIVERY_ROOT@/station_locations.xlsx')
+implementation/project/work/ebas_download/compare_local.py,19,evidence=[f'@INPUT_ROOT@/data_sources/source_data/{mapping[code][0]}/{mapping[code][0]}.xlsx']
+implementation/project/work/ebas_download/complete_package.py,3,O=Path('@DELIVERY_ROOT@/EBAS_observations');Z=O.parent/'EBAS_observations_raw.zip';manifest=json.loads((O/'download_manifest.json').read_text())
+implementation/project/work/ebas_download/df_audit.py,5,base=Path('@INPUT_ROOT@/data_sources')
+implementation/project/work/ebas_download/df_audit.py,19,selected=json.load(open('@DELIVERY_ROOT@/EBAS_input_selection/selected_netcdf_records.json'))
+implementation/project/work/ebas_download/df_audit.py,20,detail=json.load(open('@DELIVERY_ROOT@/EBAS_station_inventory/station_inventory_details.json'))
+implementation/project/work/ebas_download/download_all.py,4,O=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/ebas_download/download_all.py,25,cached=Path('@DELIVERY_ROOT@/EBAS_IPR_PM25_NO2/source_netcdf')/name
+implementation/project/work/ebas_download/final_verify.py,4,W=Path('work/ebas_download');O=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/ebas_download/package_mppd_inputs.py,3,P=Path('@DELIVERY_ROOT@/MPPD_deposition_fractions')
+implementation/project/work/ebas_download/package_raw.py,3,O=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/ebas_download/recover_large.py,3,W=Path('work/ebas_download');O=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/ebas_download/refresh_replaced.py,4,W=Path('work/ebas_download');O=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/ebas_download/repair_channel_metadata.py,4,O=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/ebas_download/retry_failed.py,3,W=Path('work/ebas_download');O=Path('@DELIVERY_ROOT@/EBAS_observations');attempts=collections.Counter()
+implementation/project/work/ebas_download/station_summary.py,9,D=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/geographic_inset/assemble.py,3,"sys.path.insert(0,""@PROJECT_ROOT@/work/ldsa_support/deps"")"
+implementation/project/work/geographic_inset/assemble.py,13,"D=Path(""@DELIVERY_ROOT@/geographic_inset"")"
+implementation/project/work/geographic_inset/assemble.py,14,S=Path('@ATTACHMENT_ROOT@')
+implementation/project/work/geographic_inset/assemble.py,28,font=FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf')
+implementation/project/work/geographic_inset/render.py,15,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/geographic_inset/render.py,19,font='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/german_pollutants/fetch.py,4,R=Path('@PROJECT_ROOT@');W=R/'work/german_pollutants'
+implementation/project/work/german_pollutants/fetch.py,5,O=Path('@DELIVERY_ROOT@/german_pollutant_inputs');O.mkdir(exist_ok=True)
+implementation/project/work/german_pollutants/merge.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/german_pollutants/merge.py,6,BOOK=Path('@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites/paired_date_value_measurements.xlsx')
+implementation/project/work/german_pollutants/prepare.py,4,R=Path('@PROJECT_ROOT@');W=R/'work/german_pollutants'
+implementation/project/work/gio_record_filter/update.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;D=Path('@DELIVERY_ROOT@/GIO_station_diagnostics');D.mkdir(exist_ok=True)
+implementation/project/work/gio_record_filter/update.py,18,"with (W/'fit.log').open('w') as f:subprocess.run(['@RSCRIPT@',str(W/'fit.R'),str(W/'trend_input.csv'),str(W)],cwd=R,stdout=f,stderr=subprocess.STDOUT,check=True)"
+implementation/project/work/integration_sensitivity/coverage_old.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;stats=pd.read_csv(W/'workbook_sources.csv');rows=[]
+implementation/project/work/integration_sensitivity/prepare_new.py,3,"R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;sys.path[:0]=[str(R/'work/ipr_download/deps'),str(R/'work/ldsa_support/deps')]"
+implementation/project/work/integration_sensitivity/prepare_new.py,5,"A=R/'outputs/network_analysis/analysis';sp=pd.read_csv(A/'site_spatial_statistics.csv').set_index('Site');N=R/'outputs/quality_control/netcdf';reg=pd.read_csv(N/'calculation_parameters/source_qc_registry.csv').set_index('Source_ID');coef=pd.read_csv(N/'calculation_parameters/diameter_deposition_weights.csv');mapping=json.loads((R/'work/station_registry/mapping.json').read_text());B=Path('@DELIVERY_ROOT@/EBAS_observations');man={r['file']:r for r in json.loads((B/'download_manifest.json').read_text())};audit=json.loads((R/'work/network_trends/recalculate/source_audit.json').read_text());paths={x['record']['file']:B/x['audit']['relative_path'] for x in audit};flags=json.loads((R/'outputs/pnsd_cleaning/PNSD/QC_protocol.json').read_text())['sentinel_values']+[999999.99999];ft=pd.read_csv(R/'work/provider_flag_audit/ebas_flags.csv',header=None,quotechar=""'"",names=['flag','description','status']);invalid=ft[ft.status.isin(['I','H','M'])].flag.to_numpy();rows=[];cover=[];verify=[]"
+implementation/project/work/integration_sensitivity/prepare_old.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/network_analysis/analysis';sp=pd.read_csv(A/'site_spatial_statistics.csv').set_index('Site');old=R/'work/quality_control/workbook/series';rows=[];audit=[]
+implementation/project/work/integration_sensitivity/render.py,3,"R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;O=R/'outputs/integration_sensitivity';D=Path('@DELIVERY_ROOT@/integration_sensitivity_figures');O.mkdir(exist_ok=True);D.mkdir(exist_ok=True);os.environ['MPLCONFIGDIR']=str(W/'mplconfig');sys.path.insert(0,str(R/'work/ldsa_support/deps'))"
+implementation/project/work/integration_sensitivity/render.py,10,"for n in ['Times New Roman.ttf','Times New Roman Bold.ttf','Times New Roman Italic.ttf','Times New Roman Bold Italic.ttf']:fontManager.addfont('@FONT_ROOT@/'+n)"
+implementation/project/work/integration_sensitivity/render.py,11,font='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/integration_sensitivity/verify_old.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;a=pd.read_csv(W/'workbook_sources.csv');report=[]
+implementation/project/work/integration_support/final_tables.py,3,"ROOT=Path('@PROJECT_ROOT@');sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'))"
+implementation/project/work/integration_support/finalize_reference_inputs.py,3,ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps')]
+implementation/project/work/integration_support/finalize_reference_inputs.py,18,"p=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/weekly_observations.xlsx');book=pd.ExcelFile(p,engine='calamine');wk=pd.read_pickle(W/'weekly.pkl');features=['BC','CO','NO','NO2','O3','PM2.5','SO2','TEMP','RH','PRESS','RAD','WS','WD','RAIN'];rows=[]"
+implementation/project/work/integration_support/model.py,5,"ROOT=Path('@PROJECT_ROOT@');STAGE=ROOT/'work/integration_support';sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'));sys.path.insert(0,str(ROOT/'work'))"
+implementation/project/work/integration_support/prepare.py,5,"ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps'),str(ROOT/'work')]"
+implementation/project/work/integration_support/prepare.py,9,"W=ROOT/'work/integration_support';O=ROOT/'outputs/integration_support';A=O/'analysis';B=Path('@INPUT_ROOT@/data_sources');PREV=ROOT/'outputs/pnsd_cleaning/analysis';sp=pd.read_csv(PREV/'site_spatial_statistics.csv').set_index('Site');oldms=pd.read_csv(PREV/'monthly_series.csv',parse_dates=['date']);flags=json.loads((ROOT/'outputs/pnsd_cleaning/PNSD/QC_protocol.json').read_text())['sentinel_values'];rev={'SCH_RB':'SCH_SUB','WAL_RB':'WAL_SUB','ZUG_RB':'ZUG_SUB'}"
+implementation/project/work/integration_support/rebuild_weekly_predictors.py,3,ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps')]
+implementation/project/work/integration_support/rebuild_weekly_predictors.py,6,"p=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/weekly_observations.xlsx');book=pd.ExcelFile(p,engine='calamine');wk=pd.read_pickle(W/'weekly.pkl');features=['BC','CO','NO','NO2','O3','PM2.5','SO2','TEMP','RH','PRESS','RAD','WS','WD','RAIN'];rows=[]"
+implementation/project/work/integration_support/redraw.py,7,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/integration_support/redraw.py,23,DEST=Path('@DELIVERY_ROOT@/integration_figures')
+implementation/project/work/integration_support/redraw.py,215,configure();path=Path('@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/site_diagnostic.py');m=load_module(path);m.configure_style()
+implementation/project/work/integration_support/redraw.py,244,"src=Path('@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/breakpoint_distribution.py').read_text();body='type_palette ='+src.split('type_palette =',1)[1].split(""fig.savefig("",1)[0]"
+implementation/project/work/integration_support/redraw.py,278,"configure();path=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/shap_importance.py');src=path.read_text();scope=globals().copy();exec(src.split('# Load SHAP comparison tables.',1)[0],scope)"
+implementation/project/work/integration_support/redraw.py,285,configure();path=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/shap_dependence.py');src=path.read_text();scope=globals().copy();scope['mlines']=mpl.lines
+implementation/project/work/integration_support/repair_pra_aux.py,3,"ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps'),str(ROOT/'work')]"
+implementation/project/work/integration_support/repair_pra_aux.py,13,"pol=pd.read_excel('@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites/paired_date_value_measurements.xlsx',sheet_name='PRA_SUB',engine='calamine');native=['LDSA','Ntotal','Nucleation','Aitken','Accumulation'];base=pd.read_csv(W/'trend_input_base.csv',parse_dates=['date']);ms=pd.read_csv(A/'monthly_series.csv',parse_dates=['date']);full=pd.read_csv(A/'full_monthly_series.csv',parse_dates=['date']);bps=pd.read_csv(A/'breakpoints.csv',parse_dates=['Breakpoint','Breakpoint_timestamp']);adds=[];madds=[];fadds=[];badds=[]"
+implementation/project/work/integration_support/restore_original_sequence.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/integration_support/restore_original_sequence.py,8,"oldinput=pd.read_csv(W/'trend_input.csv',parse_dates=['date']);ms=pd.read_csv(A/'monthly_series.csv',parse_dates=['date']);oldms=pd.read_csv(R/'outputs/pnsd_cleaning/analysis/monthly_series.csv',parse_dates=['date']);e=pd.read_csv(A/'site_eligibility.csv');prevbp=pd.read_csv(A/'breakpoints.csv');book=pd.ExcelFile('@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites/paired_date_value_measurements.xlsx',engine='calamine')"
+implementation/project/work/integration_support/restore_original_sequence.py,26,"lan=pd.read_excel('@INPUT_ROOT@/data_sources/LAN/LANbreakpoint/data/LAN.xlsx',engine='calamine')"
+implementation/project/work/integration_support/restore_original_sequence.py,74,"policy=json.loads((A.parent/'analysis_policy.json').read_text());policy['breakpoints']='Original retained observation row sequence (LAN multiple-source records are ordered chronologically to match its original integrated workbook), single linear KernelCPD min_size=2; preserve >=20 valid daily-based months. Native LDSA/PNC split at their own detected row index; synchronized pollutants split at the start of the LDSA breakpoint month.';policy['LAN_ancillary_source']='@INPUT_ROOT@/data_sources/LAN/LANbreakpoint/data/LAN.xlsx';policy['LAN_phase_boundary']='Use exact LDSA timestamp, as specified in the original LAN R script; paired analyses still use common valid calendar months.';policy['duplicate_timestamps']='Full-record trend: first original row per timestamp (original R distinct then arrange). Native phase trends retain original rows. Synchronized pollutant phases remove exact duplicate date/value rows (original sync drop_duplicates). Weekly means retain original rows.';(A.parent/'analysis_policy.json').write_text(json.dumps(policy,ensure_ascii=False,indent=2));print('OBSERVATION SEQUENCE PREPARED',len(changed),'changed fits',new.group_id.nunique(),'total')"
+implementation/project/work/integration_support/run_after_prepare.py,3,w=Path('work/integration_support');a=Path('outputs/integration_support/analysis');py='@PYTHON@'
+implementation/project/work/integration_support/run_after_prepare.py,10,"run(['@RSCRIPT@',str(w/'trends.R'),str(w/'trend_input.csv'),str(a)],'trends')"
+implementation/project/work/integration_support/run_after_prepare.py,12,"run(['@RSCRIPT@',str(w/'sensitivity.R')],'sensitivity')"
+implementation/project/work/ipr_download/download.py,3,"W=Path('work/ipr_download');O=Path('@DELIVERY_ROOT@/EBAS_IPR_PM25_NO2');(O/'source_netcdf').mkdir(parents=True,exist_ok=True)"
+implementation/project/work/ipr_download/finalize.py,6,W=Path('work/ipr_download');O=Path('@DELIVERY_ROOT@/EBAS_IPR_PM25_NO2')
+implementation/project/work/ipr_processing/finish_redraw.py,4,R=Path('@PROJECT_ROOT@');W=R/'work/ipr_processing';A=R/'outputs/ipr_processing/analysis';OLD=R/'outputs/workbook_processing/analysis';U=Path('@DELIVERY_ROOT@');D=U/'IPR_pollutant_figures';D.mkdir(exist_ok=True)
+implementation/project/work/ipr_processing/prepare_update.py,4,"R=Path('@PROJECT_ROOT@');W=R/'work/ipr_processing';OLD=R/'outputs/workbook_processing/analysis';A=R/'outputs/ipr_processing/analysis';A.mkdir(parents=True,exist_ok=True)"
+implementation/project/work/ipr_processing/prepare_update.py,5,SRC=Path('@INPUT_ROOT@/documents/IPR_EBAS_PM25_NO2_2009-2019.xlsx')
+implementation/project/work/ldsa_reference_style.py,6,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/ldsa_support/analysis_sensitivity.py,3,"ROOT=Path('@PROJECT_ROOT@');STAGE=ROOT/'work/ldsa_support';sys.path.insert(0,str(STAGE/'deps'))"
+implementation/project/work/ldsa_support/analysis_sensitivity.py,8,oldroot=Path('@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/clean17-500')
+implementation/project/work/ldsa_support/export_streaming.py,5,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/ldsa_support/harmonize_pnc.py,5,"ROOT=Path('@PROJECT_ROOT@');STAGE=ROOT/'work/ldsa_support';sys.path.insert(0,str(STAGE/'deps'))"
+implementation/project/work/ldsa_support/redraw_regulatory_updated.py,9,"""@PROJECT_ROOT@/outputs/ldsa_cleaned_reanalysis/figures"""
+implementation/project/work/ldsa_support/replot_models.py,3,"ROOT=Path('@PROJECT_ROOT@');sys.path.insert(0,str(ROOT/'work'));sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'))"
+implementation/project/work/meteorology/download.py,3,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/meteorology/download.py,5,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/meteorology/extract.py,3,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/meteorology/extract.py,7,BASE=Path('@DELIVERY_ROOT@');O=BASE/'netcdf_meteorology'
+implementation/project/work/meteorology/scan_local.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ipr_download/deps')"
+implementation/project/work/meteorology/scan_local.py,5,ROOT=Path('@PROJECT_ROOT@');W=ROOT/'work/meteorology'
+implementation/project/work/meteorology/scan_local.py,6,B=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/model_cleaned_ldsa.py,5,"ROOT=Path('@PROJECT_ROOT@');STAGE=ROOT/'work/ldsa_support';sys.path.insert(0,str(STAGE/'deps'))"
+implementation/project/work/netcdf_pollutants/audit/audit_raw.py,3,"R=Path('@PROJECT_ROOT@');sys.path.insert(0,str(R/'work/ipr_download/deps'));import netCDF4,numpy as np,pandas as pd"
+implementation/project/work/netcdf_pollutants/audit/audit_raw.py,4,"A=R/'work/netcdf_pollutants/audit';B=Path('@DELIVERY_ROOT@/EBAS_observations');M={r['old']:r for r in json.load(open(R/'work/station_registry/mapping.json'))};vv=[r for r in json.load(open(B/'verified_metadata.json')) if r['station_code'] in M and '/PNSD/' not in r['relative_path']];ff=pd.read_csv(R/'work/provider_flag_audit/ebas_flags.csv',header=None,quotechar=""'"",names=['code','description','status']);invalid=ff[ff.status.isin(['I','H','M'])].code.to_numpy();known=set(ff.code)|{0}"
+implementation/project/work/netcdf_pollutants/audit/check_identity.py,4,"R=Path('@PROJECT_ROOT@');A=R/'work/netcdf_pollutants/audit';B=Path('@DELIVERY_ROOT@/EBAS_observations');sys.path.insert(0,str(R/'work/ipr_download/deps'));import netCDF4"
+implementation/project/work/netcdf_pollutants/audit/verify_fig3_numbers.py,5,"sys.path.insert(0,""@PROJECT_ROOT@/work/ldsa_support/deps"")"
+implementation/project/work/netcdf_pollutants/audit/verify_fig3_numbers.py,7,"R=Path('@PROJECT_ROOT@');W=R/'work/netcdf_pollutants';A=W/'audit';out=R/'outputs/netcdf_pollutants/analysis';old=R/'outputs/quality_control/analysis';pp=pd.read_csv(W/'exact_overlap_pairs.csv');prior=pd.read_csv(old/'exact_overlap_pairs.csv');cl=pd.read_csv(W/'classification.csv');off=pd.read_csv(W/'exact_overlap_breakpoints_min12.csv');ms=pd.read_csv(out/'monthly_series.csv');ms['date']=pd.to_datetime(ms.date,format='mixed');tr=pd.read_csv(out/'trends.csv')"
+implementation/project/work/netcdf_pollutants/audit/verify_monthly_inputs.py,4,"R=Path('@PROJECT_ROOT@');W=R/'work/netcdf_pollutants';A=W/'audit';OUT=R/'outputs/netcdf_pollutants/analysis';OLD=R/'outputs/quality_control/analysis';raw=pd.read_pickle(W/'selected.pkl');ms=pd.read_csv(OUT/'monthly_series.csv',parse_dates=['date']);om=pd.read_csv(OLD/'monthly_series.csv',parse_dates=['date']);sc=pd.read_csv(OUT/'new_pollutant_screening.csv');checks=[];ms['date']=pd.to_datetime(ms.date,format='mixed');om['date']=pd.to_datetime(om.date,format='mixed')"
+implementation/project/work/netcdf_pollutants/audit/verify_selected.py,3,"R=Path('@PROJECT_ROOT@');W=R/'work/netcdf_pollutants';A=W/'audit';sys.path.insert(0,str(R/'work/ipr_download/deps'));import netCDF4,numpy as np,pandas as pd"
+implementation/project/work/netcdf_pollutants/build_inputs.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent
+implementation/project/work/netcdf_pollutants/extract.py,4,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent
+implementation/project/work/netcdf_pollutants/extract.py,8,B=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/netcdf_pollutants/fit.py,5,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/netcdf_pollutants/analysis';OLD=R/'outputs/quality_control/analysis'
+implementation/project/work/netcdf_pollutants/fit.py,14,"with (p/'run.log').open('w') as f:subprocess.run(['@RSCRIPT@',str(W/'new_trends.R'),str(inp),str(p)],cwd=R,stdout=f,stderr=subprocess.STDOUT,check=True)"
+implementation/project/work/netcdf_pollutants/render_fig3.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/netcdf_pollutants/analysis'
+implementation/project/work/netcdf_pollutants/render_fig3.py,9,"for n in ['Times New Roman.ttf','Times New Roman Bold.ttf','Times New Roman Italic.ttf','Times New Roman Bold Italic.ttf']:fontManager.addfont('@FONT_ROOT@/'+n)"
+implementation/project/work/netcdf_pollutants/render_fig3.py,14,m.DEST=Path('@DELIVERY_ROOT@/netcdf_pollutant_figures');m.DEST.mkdir(exist_ok=True)
+implementation/project/work/netcdf_pollutants/render_fig3.py,27,"for t in fig.findobj(m.mpl.text.Text):t.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=t.get_fontsize(),weight='bold'))"
+implementation/project/work/netcdf_pollutants/word_tables/build_tables.py,6,ROOT = Path('@PROJECT_ROOT@')
+implementation/project/work/netcdf_pollutants/word_tables/build_tables.py,18,BASE = Path('@DELIVERY_ROOT@')
+implementation/project/work/network_analysis/canonicalize_model_inputs.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;M=W/'model'
+implementation/project/work/network_analysis/finalize_analysis.py,3,"R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/network_analysis/analysis';sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/network_analysis/gio_monthly.R,2,"d<-read.csv('@PROJECT_ROOT@/work/network_analysis/GIO_raw.csv');d$date<-as.POSIXct(d$date,tz='UTC')"
+implementation/project/work/network_analysis/gio_monthly.R,3,"z<-as.data.frame(timeAverage(d,avg.time='month',data.thresh=10,progress=FALSE));z<-z[is.finite(z$value),c('date','value')];z$date<-format(z$date,'%Y-%m-%d');z$Site<-'GIO_RB';z$Type<-'RB';z$Metric<-'LDSA';z$Phase<-'MetaFull';z$group_id<-'GIO_RB|LDSA|MetaFull';write.csv(z,'@PROJECT_ROOT@/work/network_analysis/gio_meta.csv',row.names=FALSE)"
+implementation/project/work/network_analysis/met_model_qc.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;M=W/'model';d=pd.read_pickle(M/'weekly_model_reference.pkl');audit=[]
+implementation/project/work/network_analysis/meteorology.py,3,"R=Path('@PROJECT_ROOT@');W=Path(__file__).parent/'meteorology';W.mkdir(exist_ok=True);sys.path[:0]=[str(R/'work/ipr_download/deps'),str(R/'work/ldsa_support/deps')]"
+implementation/project/work/network_analysis/meteorology.py,5,B=Path('@DELIVERY_ROOT@/netcdf_meteorology');reg=pd.read_csv(B/'source_metadata/meteorology_missingness.csv');files=pd.read_csv(B/'source_metadata/meteorology_input_records.csv').set_index('Source_ID');overview=pd.read_csv(B/'netcdf_meteorology_summary.csv').set_index('Site')
+implementation/project/work/network_analysis/model/model.py,5,"ROOT=Path('@PROJECT_ROOT@');STAGE=ROOT/'work/network_analysis/model';sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'));sys.path.insert(0,str(ROOT/'work'))"
+implementation/project/work/network_analysis/pollutants/build_inputs.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent
+implementation/project/work/network_analysis/pollutants/fit.py,5,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/network_analysis/analysis';OLD=R/'outputs/network_analysis/base_analysis'
+implementation/project/work/network_analysis/pollutants/fit.py,14,"with (p/'run.log').open('w') as f:subprocess.run(['@RSCRIPT@',str(W/'new_trends.R'),str(inp),str(p)],cwd=R,stdout=f,stderr=subprocess.STDOUT,check=True)"
+implementation/project/work/network_analysis/prepare_models.py,3,"R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;M=W/'model';M.mkdir(exist_ok=True);A=R/'outputs/network_analysis/analysis';BASE=R/'outputs/record_exclusions/analysis';sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/network_analysis/prepare_models.py,36,"met=pd.read_csv('@DELIVERY_ROOT@/netcdf_meteorology/netcdf_meteorology_summary.csv');met['Station_class']=met.Site.str.rsplit('_',n=1).str[-1];met['original_UB_TR_model_scope']=met.Station_class.isin(['UB','TR']);met.to_csv(M/'meteorology_scope.csv',index=False)"
+implementation/project/work/network_analysis/prepare_rb_models.py,3,"R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;M=W/'model';A=R/'outputs/network_analysis/analysis';sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/network_analysis/prepare_rb_models.py,7,"prior=pd.read_pickle(M/'weekly_model_reference.pkl');prior=prior[~prior.Type.eq('RB')];wk=pd.read_pickle(W/'weekly.pkl');bps=pd.read_csv(A/'breakpoints.csv');mapping={x['new']:x for x in json.loads((R/'work/station_registry/mapping.json').read_text())};met=pd.read_pickle(W/'meteorology/weekly.pkl');oldbook=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/weekly_observations.xlsx');book=pd.ExcelFile(oldbook,engine='calamine');rev={'SCH_RB':'SCH_SUB','WAL_RB':'WAL_SUB','ZUG_RB':'ZUG_SUB'};rows=[prior];audit=[];ranges=pd.read_csv(M/'native_phase_ranges.csv');newranges=[]"
+implementation/project/work/network_analysis/prepare_run.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;O=R/'outputs/network_analysis';A=O/'base_analysis';P=W/'pollutants';PA=O/'analysis';B=Path('@DELIVERY_ROOT@');D=B/'ancillary_analysis_figures'
+implementation/project/work/network_analysis/prepare_run.py,22,"''';(W/'gio_monthly.R').write_text(s);subprocess.run(['@RSCRIPT@',str(W/'gio_monthly.R')],cwd=R,check=True)"
+implementation/project/work/network_analysis/prepare_run.py,27,"with (W/'base_fit.log').open('w') as f:subprocess.run(['@RSCRIPT@',str(OW/'workbook/trends.R'),str(W/'trend_input.csv'),str(A)],cwd=R,check=True,stdout=f,stderr=subprocess.STDOUT)"
+implementation/project/work/network_analysis/render.py,3,"R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/network_analysis/analysis';D=Path('@DELIVERY_ROOT@/ancillary_analysis_figures');os.environ['MPLCONFIGDIR']=str(W/'mplconfig');sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/network_analysis/render.py,7,FONT='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/network_analysis/render.py,8,"for n in ['Times New Roman.ttf','Times New Roman Bold.ttf','Times New Roman Italic.ttf','Times New Roman Bold Italic.ttf']:fontManager.addfont('@FONT_ROOT@/'+n)"
+implementation/project/work/network_trends/audit_qc_correction.py,3,"R=Path('@PROJECT_ROOT@');sys.path.insert(0,str(R/'work/ldsa_support/deps'))"
+implementation/project/work/network_trends/audit_qc_correction.py,5,old=Path('@DELIVERY_ROOT@/netcdf_ldsa_inputs')
+implementation/project/work/network_trends/prepare.py,3,R=Path('@PROJECT_ROOT@')
+implementation/project/work/network_trends/prepare.py,8,OLD=R/'outputs/workbook_processing/analysis';B=Path('@DELIVERY_ROOT@')
+implementation/project/work/network_trends/recalculate/calculate.py,3,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/network_trends/recalculate/calculate.py,7,D=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/network_trends/redraw.py,3,R=Path('@PROJECT_ROOT@')
+implementation/project/work/network_trends/redraw.py,7,FONT='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/network_trends/redraw.py,9,fontManager.addfont('@FONT_ROOT@/'+f)
+implementation/project/work/network_trends/redraw.py,11,O=Path('@DELIVERY_ROOT@/network_trend_figures');O.mkdir(exist_ok=True)
+implementation/project/work/network_trends/reuse_fits.py,3,"R=Path('@PROJECT_ROOT@');sys.path.insert(0,str(R/'work/ldsa_support/deps'))"
+implementation/project/work/pal_channel_conversion/export_s3_s6.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/pal_channel_conversion/export_s3_s6.py,9,O=Path('@DELIVERY_ROOT@/PAL_station_diagnostics');O.mkdir(exist_ok=True)
+implementation/project/work/pal_channel_conversion/export_s3_s6.py,10,font='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/pal_channel_conversion/export_s3_s6.py,11,"for name in ['Times New Roman.ttf','Times New Roman Bold.ttf','Times New Roman Italic.ttf','Times New Roman Bold Italic.ttf']:fontManager.addfont('@FONT_ROOT@/'+name)"
+implementation/project/work/pal_channel_conversion/prepare.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ipr_download/deps'),str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/pal_channel_conversion/prepare.py,7,OLD=R/'outputs/network_trends/analysis';OW=R/'work/network_trends';B=Path('@DELIVERY_ROOT@')
+implementation/project/work/pal_channel_conversion/redraw.py,3,R=Path('@PROJECT_ROOT@')
+implementation/project/work/pal_channel_conversion/redraw.py,7,FONT='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/pal_channel_conversion/redraw.py,9,fontManager.addfont('@FONT_ROOT@/'+f)
+implementation/project/work/pal_channel_conversion/redraw.py,11,O=Path('@DELIVERY_ROOT@/PAL_native_bin_analysis');O.mkdir(exist_ok=True)
+implementation/project/work/pal_channel_conversion/verify.py,3,"R=Path('@PROJECT_ROOT@');sys.path.insert(0,str(R/'work/ldsa_support/deps'))"
+implementation/project/work/pal_channel_conversion/verify.py,6,O=Path('@DELIVERY_ROOT@/PAL_native_bin_analysis');O.mkdir(exist_ok=True)
+implementation/project/work/plot_cleaned_ldsa.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/plot_cleaned_ldsa.py,13,ROOT=Path('@PROJECT_ROOT@');OUT=ROOT/'outputs/ldsa_cleaned_reanalysis';ANA=OUT/'analysis';FIG=OUT/'figures';STAGE=ROOT/'work/ldsa_support'
+implementation/project/work/plot_cleaned_ldsa_extras.py,3,"ROOT=Path('@PROJECT_ROOT@');sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'))"
+implementation/project/work/provider_flag_audit/audit.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ipr_download/deps'),str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/provider_flag_audit/audit.py,6,W=Path(__file__).parent;O=Path('@DELIVERY_ROOT@/provider_quality_flags');O.mkdir(exist_ok=True)
+implementation/project/work/provider_flag_audit/audit_network.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ipr_download/deps'),str(R/'work/ldsa_support/deps')]"
+implementation/project/work/provider_flag_audit/audit_network.py,5,W=Path(__file__).parent;O=Path('@DELIVERY_ROOT@/provider_quality_flags');O.mkdir(exist_ok=True)
+implementation/project/work/provider_flag_audit/qc_sensitivity.py,1,exec(open('@PROJECT_ROOT@/work/provider_flag_audit/audit.py').read().split('results=[];')[0])
+implementation/project/work/qc_pollutants.py,4,R=Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/finalize_analysis_tables.py,2,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/quality_control/finalize_analysis_tables.py,6,R=Path('@PROJECT_ROOT@');O=R/'outputs/quality_control';A=O/'analysis';W=R/'work/quality_control'
+implementation/project/work/quality_control/match_old.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ipr_download/deps'),str(R/'work/ldsa_support/deps')]"
+implementation/project/work/quality_control/match_old.py,5,W=Path(__file__).parent;B=Path('@DELIVERY_ROOT@');D=B/'EBAS_observations/source_netcdf'
+implementation/project/work/quality_control/merge_network.py,4,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;O=R/'outputs/quality_control';A=O/'analysis';old=O/'workbook/analysis';new=O/'netcdf/analysis'
+implementation/project/work/quality_control/merge_network.py,20,"with (W/'combined_meta.log').open('w') as f:subprocess.run(['@RSCRIPT@',str(W/'workbook/trends.R'),str(W/'trend_input.csv'),str(A)],cwd=R,stdout=f,stderr=subprocess.STDOUT,check=True)"
+implementation/project/work/quality_control/netcdf/calculate.py,3,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/netcdf/calculate.py,7,D=Path('@DELIVERY_ROOT@/EBAS_observations')
+implementation/project/work/quality_control/network/prepare.py,3,R=Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/network/prepare.py,8,OLD=R/'outputs/workbook_processing/analysis';B=Path('@DELIVERY_ROOT@')
+implementation/project/work/quality_control/prepare_new.py,2,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent
+implementation/project/work/quality_control/render_fig2.py,2,os.environ['MPLCONFIGDIR']='@PROJECT_ROOT@/work/quality_control/mplconfig'
+implementation/project/work/quality_control/render_fig2.py,5,R=Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/render_fig2.py,9,FONT='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/quality_control/render_fig2.py,11,fontManager.addfont('@FONT_ROOT@/'+f)
+implementation/project/work/quality_control/render_fig2.py,13,O=Path('@DELIVERY_ROOT@/provider_quality_control_analysis/PNG');O.mkdir(exist_ok=True)
+implementation/project/work/quality_control/render_remaining.py,2,os.environ['MPLCONFIGDIR']='@PROJECT_ROOT@/work/quality_control/mplconfig'
+implementation/project/work/quality_control/render_remaining.py,5,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/quality_control/workbook/analysis'
+implementation/project/work/quality_control/render_remaining.py,8,"for n in ['Times New Roman.ttf','Times New Roman Bold.ttf','Times New Roman Italic.ttf','Times New Roman Bold Italic.ttf']:fontManager.addfont('@FONT_ROOT@/'+n)"
+implementation/project/work/quality_control/render_remaining.py,10,m.DEST=Path('@DELIVERY_ROOT@/provider_quality_control_analysis/PNG');m.WORK=W/'workbook';m.DEST.mkdir(exist_ok=True)
+implementation/project/work/quality_control/render_remaining.py,13,"for t in fig.findobj(m.mpl.text.Text):t.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=t.get_fontsize(),weight='bold'))"
+implementation/project/work/quality_control/render_s3_s6.py,2,os.environ['MPLCONFIGDIR']='@PROJECT_ROOT@/work/quality_control/mplconfig'
+implementation/project/work/quality_control/render_s3_s6.py,5,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/quality_control/render_s3_s6.py,11,O=Path('@DELIVERY_ROOT@/provider_quality_control_analysis/PNG');O.mkdir(exist_ok=True)
+implementation/project/work/quality_control/render_s3_s6.py,12,font='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/quality_control/render_s3_s6.py,13,"for name in ['Times New Roman.ttf','Times New Roman Bold.ttf','Times New Roman Italic.ttf','Times New Roman Bold Italic.ttf']:fontManager.addfont('@FONT_ROOT@/'+name)"
+implementation/project/work/quality_control/run_analysis.py,4,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;OW=W/'workbook';A=R/'outputs/quality_control/workbook/analysis';PY=sys.executable
+implementation/project/work/quality_control/run_analysis.py,14,"run(['@RSCRIPT@',str(OW/'meta_monthly.R')],'meta_monthly')"
+implementation/project/work/quality_control/run_analysis.py,26,"run(['@RSCRIPT@',str(OW/'trends.R'),str(OW/'trend_input.csv'),str(A)],'workbook_trends')"
+implementation/project/work/quality_control/run_analysis.py,28,"run(['@RSCRIPT@',str(OW/'sensitivity.R')],'workbook_sensitivity')"
+implementation/project/work/quality_control/run_outputs.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent
+implementation/project/work/quality_control/setup.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;O=R/'outputs/quality_control';B=Path('@DELIVERY_ROOT@/provider_quality_control_analysis')
+implementation/project/work/quality_control/setup.py,19,R=Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/setup_render.py,2,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;D='@DELIVERY_ROOT@/provider_quality_control_analysis/PNG'
+implementation/project/work/quality_control/setup_render.py,13,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/quality_control/workbook/analysis'
+implementation/project/work/quality_control/setup_render.py,15,"for n in ['Times New Roman.ttf','Times New Roman Bold.ttf','Times New Roman Italic.ttf','Times New Roman Bold Italic.ttf']:fontManager.addfont('@FONT_ROOT@/'+n)"
+implementation/project/work/quality_control/setup_render.py,20,"for t in fig.findobj(m.mpl.text.Text):t.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=t.get_fontsize(),weight='bold'))"
+implementation/project/work/quality_control/spatial/calculate.py,4,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/spatial/calculate.py,5,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/quality_control/spatial/draw_sensitivity.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/quality_control/spatial/draw_sensitivity.py,11,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/quality_control/spatial/draw_sensitivity.py,13,W=Path('@PROJECT_ROOT@/work/quality_control/spatial')
+implementation/project/work/quality_control/spatial/draw_sensitivity.py,15,"for f in ['Times New Roman.ttf','Times New Roman Bold.ttf']:fontManager.addfont('@FONT_ROOT@/'+f)"
+implementation/project/work/quality_control/spatial/draw_sensitivity.py,19,"'mathtext.fontset':'custom','mathtext.rm':FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf').get_fontconfig_pattern(),'mathtext.bf':FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf').get_fontconfig_pattern(),'mathtext.it':FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf').get_fontconfig_pattern(),'mathtext.default':'regular','savefig.facecolor':'white','figure.facecolor':'white'})"
+implementation/project/work/quality_control/spatial/draw_sensitivity.py,69,"t.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=t.get_fontsize(),weight='bold'))"
+implementation/project/work/quality_control/spatial/draw_sensitivity.py,72,assert all(t.get_fontproperties().get_file()=='@FONT_ROOT@/Times New Roman Bold.ttf' for t in fig.findobj(mpl.text.Text) if t.get_visible() and t.get_text())
+implementation/project/work/quality_control/spatial/redraw.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/quality_control/spatial/redraw.py,10,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/spatial/redraw.py,12,B=Path('@DELIVERY_ROOT@/provider_quality_control_analysis')
+implementation/project/work/quality_control/spatial/redraw.py,20,"for text in fig.findobj(mpl.text.Text):text.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=text.get_fontsize(),weight='bold'))"
+implementation/project/work/quality_control/spatial/sensitivity.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/quality_control/spatial/sensitivity.py,6,ROOT=Path('@PROJECT_ROOT@');W=ROOT/'work/quality_control/spatial'
+implementation/project/work/quality_control/spatial/sensitivity.py,7,O=Path('@DELIVERY_ROOT@/provider_quality_control_analysis/diameter_coverage')
+implementation/project/work/quality_control/spatial/verify.py,4,ROOT=Path('@PROJECT_ROOT@');W=ROOT/'work/quality_control/spatial'
+implementation/project/work/quality_control/spatial/verify.py,5,BASE=Path('@DELIVERY_ROOT@');O=BASE/'provider_quality_control_analysis'
+implementation/project/work/quality_control/verification/verify_final_analysis.py,4,R=Path('@PROJECT_ROOT@');W=R/'work/quality_control';V=W/'verification';O=R/'outputs/quality_control';A=O/'analysis';OA=O/'workbook/analysis';B=Path('@DELIVERY_ROOT@');checks={};warnings=[]
+implementation/project/work/quality_control/verification/verify_new_and_pollutants.py,3,R=Path('@PROJECT_ROOT@');V=R/'work/quality_control/verification';B=Path('@DELIVERY_ROOT@');O=R/'outputs/quality_control/netcdf';OLD=R/'outputs/network_trends/corrected_LDSA';sys.path[:0]=[str(R/'work/ipr_download/deps')]
+implementation/project/work/quality_control/verification/verify_old_masks.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ipr_download/deps'),str(R/'work/ldsa_support/deps')]"
+implementation/project/work/quality_control/verification/verify_old_masks.py,5,V=R/'work/quality_control/verification';B=Path('@DELIVERY_ROOT@');D=B/'EBAS_observations/source_netcdf';W=R/'work/quality_control'
+implementation/project/work/quality_control/verification/verify_old_recalculation.py,4,"R=Path('@PROJECT_ROOT@');W=R/'work/quality_control';V=W/'verification';masks=pickle.load(open(W/'old_qc_masks.pkl','rb'));rows=[]"
+implementation/project/work/quality_control/word_tables/build_tables.py,6,ROOT = Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/word_tables/build_tables.py,18,BASE = Path('@DELIVERY_ROOT@')
+implementation/project/work/quality_control/word_tables/prepare_pairs.py,3,ROOT = Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/workbook/final_tables.py,3,"ROOT=Path('@PROJECT_ROOT@');sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'))"
+implementation/project/work/quality_control/workbook/finalize_reference_inputs.py,3,ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps')]
+implementation/project/work/quality_control/workbook/finalize_reference_inputs.py,18,"p=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/weekly_observations.xlsx');book=pd.ExcelFile(p,engine='calamine');wk=pd.read_pickle(W/'weekly.pkl');features=['BC','CO','NO','NO2','O3','PM2.5','SO2','TEMP','RH','PRESS','RAD','WS','WD','RAIN'];rows=[]"
+implementation/project/work/quality_control/workbook/joined_sources.py,4,ROOT=Path('@PROJECT_ROOT@');B=Path('@INPUT_ROOT@/data_sources')
+implementation/project/work/quality_control/workbook/model.py,5,"ROOT=Path('@PROJECT_ROOT@');STAGE=ROOT/'work/quality_control/workbook';sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'));sys.path.insert(0,str(ROOT/'work'))"
+implementation/project/work/quality_control/workbook/prepare.py,5,"ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps'),str(ROOT/'work')]"
+implementation/project/work/quality_control/workbook/prepare.py,9,"W=ROOT/'work/quality_control/workbook';O=ROOT/'outputs/quality_control/workbook';A=O/'analysis';B=Path('@INPUT_ROOT@/data_sources');PREV=ROOT/'outputs/pnsd_cleaning/analysis';sp=pd.read_csv(PREV/'site_spatial_statistics.csv').set_index('Site');oldms=pd.read_csv(PREV/'monthly_series.csv',parse_dates=['date']);flags=json.loads((ROOT/'outputs/pnsd_cleaning/PNSD/QC_protocol.json').read_text())['sentinel_values'];rev={'SCH_RB':'SCH_SUB','WAL_RB':'WAL_SUB','ZUG_RB':'ZUG_SUB'}"
+implementation/project/work/quality_control/workbook/redraw.py,7,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/quality_control/workbook/redraw.py,23,DEST=Path('@DELIVERY_ROOT@/workbook_analysis_figures')
+implementation/project/work/quality_control/workbook/redraw.py,237,configure();path=Path('@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/site_diagnostic.py');m=load_module(path);m.configure_style()
+implementation/project/work/quality_control/workbook/redraw.py,266,"src=Path('@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/breakpoint_distribution.py').read_text();body='type_palette ='+src.split('type_palette =',1)[1].split(""fig.savefig("",1)[0]"
+implementation/project/work/quality_control/workbook/redraw.py,300,"configure();path=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/shap_importance.py');src=path.read_text();scope=globals().copy();exec(src.split('# Load SHAP comparison tables.',1)[0],scope)"
+implementation/project/work/quality_control/workbook/redraw.py,307,configure();path=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/shap_dependence.py');src=path.read_text();scope=globals().copy();scope['mlines']=mpl.lines
+implementation/project/work/quality_control/workbook/restore_original_sequence.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/quality_control/workbook/restore_original_sequence.py,8,"oldinput=pd.read_csv(W/'trend_input.csv',parse_dates=['date']);ms=pd.read_csv(A/'monthly_series.csv',parse_dates=['date']);oldms=pd.read_csv(R/'outputs/pnsd_cleaning/analysis/monthly_series.csv',parse_dates=['date']);e=pd.read_csv(A/'site_eligibility.csv');prevbp=pd.read_csv(A/'breakpoints.csv');book=pd.ExcelFile('@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites/paired_date_value_measurements.xlsx',engine='calamine')"
+implementation/project/work/quality_control/workbook/restore_original_sequence.py,26,"lan=pd.read_excel('@INPUT_ROOT@/data_sources/LAN/LANbreakpoint/data/LAN.xlsx',engine='calamine')"
+implementation/project/work/quality_control/workbook/restore_original_sequence.py,85,"policy=json.loads((A.parent/'analysis_policy.json').read_text());policy['breakpoints']='Original retained observation row sequence (LAN multiple-source records are ordered chronologically to match its original integrated workbook), single linear KernelCPD min_size=2; preserve >=20 valid daily-based months. Native LDSA/PNC split at their own detected row index; synchronized pollutants split at the start of the LDSA breakpoint month.';policy['LAN_ancillary_source']='@INPUT_ROOT@/data_sources/LAN/LANbreakpoint/data/LAN.xlsx';policy['LAN_phase_boundary']='Use exact LDSA timestamp, as specified in the original LAN R script; paired analyses still use common valid calendar months.';policy['duplicate_timestamps']='Full-record trend: first original row per timestamp (original R distinct then arrange). Native phase trends retain original rows. Synchronized pollutant phases remove exact duplicate date/value rows (original sync drop_duplicates). Weekly means retain original rows.';(A.parent/'analysis_policy.json').write_text(json.dumps(policy,ensure_ascii=False,indent=2));print('OBSERVATION SEQUENCE PREPARED',len(changed),'changed fits',new.group_id.nunique(),'total')"
+implementation/project/work/rebuild_ldsa_cleaned.py,6,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/rebuild_ldsa_cleaned.py,8,BASE=Path('@INPUT_ROOT@/data_sources')
+implementation/project/work/record_exclusions/continue.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;O=R/'outputs/record_exclusions';PY=sys.executable
+implementation/project/work/record_exclusions/continue.py,8,"run(['@RSCRIPT@',str(W/'network/monthly.R')],'monthly')"
+implementation/project/work/record_exclusions/continue.py,9,"run(['@RSCRIPT@',str(W/'workbook/trends.R'),str(W/'network/trend_input.csv'),str(O/'netcdf/analysis')],'new_trends')"
+implementation/project/work/record_exclusions/finalize_analysis_tables.py,2,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/record_exclusions/finalize_analysis_tables.py,6,R=Path('@PROJECT_ROOT@');O=R/'outputs/record_exclusions';A=O/'analysis';W=R/'work/record_exclusions'
+implementation/project/work/record_exclusions/layout/render.py,5,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent
+implementation/project/work/record_exclusions/layout/render.py,6,D=Path('@DELIVERY_ROOT@/record_exclusion_analysis/PNG');D.mkdir(exist_ok=True)
+implementation/project/work/record_exclusions/layout/render.py,10,"source=source.replace(""O=Path('@DELIVERY_ROOT@/provider_quality_control_analysis/PNG')"",f'O=Path({str(D)!r})')"
+implementation/project/work/record_exclusions/merge_network.py,4,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;O=R/'outputs/record_exclusions';A=O/'analysis';old=O/'workbook/analysis';new=O/'netcdf/analysis'
+implementation/project/work/record_exclusions/merge_network.py,20,"with (W/'combined_meta.log').open('w') as f:subprocess.run(['@RSCRIPT@',str(W/'workbook/trends.R'),str(W/'trend_input.csv'),str(A)],cwd=R,stdout=f,stderr=subprocess.STDOUT,check=True)"
+implementation/project/work/record_exclusions/network/prepare.py,3,R=Path('@PROJECT_ROOT@')
+implementation/project/work/record_exclusions/network/prepare.py,8,OLD=R/'outputs/workbook_processing/analysis';B=Path('@DELIVERY_ROOT@')
+implementation/project/work/record_exclusions/pollutants/build_inputs.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent
+implementation/project/work/record_exclusions/pollutants/fit.py,5,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/record_exclusions/pollutants/analysis';OLD=R/'outputs/record_exclusions/analysis'
+implementation/project/work/record_exclusions/pollutants/fit.py,14,"with (p/'run.log').open('w') as f:subprocess.run(['@RSCRIPT@',str(W/'new_trends.R'),str(inp),str(p)],cwd=R,stdout=f,stderr=subprocess.STDOUT,check=True)"
+implementation/project/work/record_exclusions/pollutants/render_fig3.py,3,R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;A=R/'outputs/record_exclusions/pollutants/analysis'
+implementation/project/work/record_exclusions/pollutants/render_fig3.py,9,"for n in ['Times New Roman.ttf','Times New Roman Bold.ttf','Times New Roman Italic.ttf','Times New Roman Bold Italic.ttf']:fontManager.addfont('@FONT_ROOT@/'+n)"
+implementation/project/work/record_exclusions/pollutants/render_fig3.py,14,m.DEST=Path('@DELIVERY_ROOT@/record_exclusion_analysis/PNG');m.DEST.mkdir(exist_ok=True)
+implementation/project/work/record_exclusions/pollutants/render_fig3.py,27,"for t in fig.findobj(m.mpl.text.Text):t.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=t.get_fontsize(),weight='bold'))"
+implementation/project/work/record_exclusions/render_fig2.py,2,os.environ['MPLCONFIGDIR']='@PROJECT_ROOT@/work/record_exclusions/mplconfig'
+implementation/project/work/record_exclusions/render_fig2.py,5,R=Path('@PROJECT_ROOT@')
+implementation/project/work/record_exclusions/render_fig2.py,9,FONT='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/record_exclusions/render_fig2.py,11,fontManager.addfont('@FONT_ROOT@/'+f)
+implementation/project/work/record_exclusions/render_fig2.py,13,O=Path('@DELIVERY_ROOT@/record_exclusion_analysis/PNG');O.mkdir(exist_ok=True)
+implementation/project/work/record_exclusions/render_s3_s6.py,2,os.environ['MPLCONFIGDIR']='@PROJECT_ROOT@/work/record_exclusions/mplconfig'
+implementation/project/work/record_exclusions/render_s3_s6.py,5,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/record_exclusions/render_s3_s6.py,11,O=Path('@DELIVERY_ROOT@/record_exclusion_analysis/PNG');O.mkdir(exist_ok=True)
+implementation/project/work/record_exclusions/render_s3_s6.py,12,font='@FONT_ROOT@/Times New Roman Bold.ttf'
+implementation/project/work/record_exclusions/render_s3_s6.py,13,"for name in ['Times New Roman.ttf','Times New Roman Bold.ttf','Times New Roman Italic.ttf','Times New Roman Bold Italic.ttf']:fontManager.addfont('@FONT_ROOT@/'+name)"
+implementation/project/work/record_exclusions/render_s6.py,3,R=Path('@PROJECT_ROOT@');TASK=Path(__file__).parent;TASK.mkdir(exist_ok=True)
+implementation/project/work/record_exclusions/render_s6.py,4,B=Path('@DELIVERY_ROOT@')
+implementation/project/work/record_exclusions/render_s6.py,9,"source=source.replace(""O=Path('@DELIVERY_ROOT@/provider_quality_control_analysis/PNG')"",f'O=Path({str(PNG)!r})')"
+implementation/project/work/record_exclusions/setup.py,4,R=Path('@PROJECT_ROOT@');W=R/'work/record_exclusions';O=R/'outputs/record_exclusions';D=Path('@DELIVERY_ROOT@/record_exclusion_analysis')
+implementation/project/work/record_exclusions/spatial/calculate.py,4,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/record_exclusions/spatial/calculate.py,5,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/record_exclusions/spatial/draw_sensitivity.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/record_exclusions/spatial/draw_sensitivity.py,11,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/record_exclusions/spatial/draw_sensitivity.py,13,W=Path('@PROJECT_ROOT@/work/record_exclusions/spatial')
+implementation/project/work/record_exclusions/spatial/draw_sensitivity.py,15,"for f in ['Times New Roman.ttf','Times New Roman Bold.ttf']:fontManager.addfont('@FONT_ROOT@/'+f)"
+implementation/project/work/record_exclusions/spatial/draw_sensitivity.py,19,"'mathtext.fontset':'custom','mathtext.rm':FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf').get_fontconfig_pattern(),'mathtext.bf':FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf').get_fontconfig_pattern(),'mathtext.it':FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf').get_fontconfig_pattern(),'mathtext.default':'regular','savefig.facecolor':'white','figure.facecolor':'white'})"
+implementation/project/work/record_exclusions/spatial/draw_sensitivity.py,69,"t.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=t.get_fontsize(),weight='bold'))"
+implementation/project/work/record_exclusions/spatial/draw_sensitivity.py,72,assert all(t.get_fontproperties().get_file()=='@FONT_ROOT@/Times New Roman Bold.ttf' for t in fig.findobj(mpl.text.Text) if t.get_visible() and t.get_text())
+implementation/project/work/record_exclusions/spatial/redraw.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/record_exclusions/spatial/redraw.py,10,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/record_exclusions/spatial/redraw.py,12,B=Path('@DELIVERY_ROOT@/record_exclusion_analysis')
+implementation/project/work/record_exclusions/spatial/redraw.py,20,"for text in fig.findobj(mpl.text.Text):text.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=text.get_fontsize(),weight='bold'))"
+implementation/project/work/record_exclusions/spatial/sensitivity.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/record_exclusions/spatial/sensitivity.py,6,ROOT=Path('@PROJECT_ROOT@');W=ROOT/'work/record_exclusions/spatial'
+implementation/project/work/record_exclusions/spatial/sensitivity.py,7,O=Path('@DELIVERY_ROOT@/record_exclusion_analysis/diameter_coverage')
+implementation/project/work/record_exclusions/spatial/verify.py,4,ROOT=Path('@PROJECT_ROOT@');W=ROOT/'work/record_exclusions/spatial'
+implementation/project/work/record_exclusions/spatial/verify.py,5,BASE=Path('@DELIVERY_ROOT@');O=BASE/'record_exclusion_analysis'
+implementation/project/work/record_exclusions/workbook/final_tables.py,3,"ROOT=Path('@PROJECT_ROOT@');sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'))"
+implementation/project/work/record_exclusions/workbook/finalize_reference_inputs.py,3,ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps')]
+implementation/project/work/record_exclusions/workbook/finalize_reference_inputs.py,18,"p=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/weekly_observations.xlsx');book=pd.ExcelFile(p,engine='calamine');wk=pd.read_pickle(W/'weekly.pkl');features=['BC','CO','NO','NO2','O3','PM2.5','SO2','TEMP','RH','PRESS','RAD','WS','WD','RAIN'];rows=[]"
+implementation/project/work/record_exclusions/workbook/joined_sources.py,4,ROOT=Path('@PROJECT_ROOT@');B=Path('@INPUT_ROOT@/data_sources')
+implementation/project/work/record_exclusions/workbook/model.py,5,"ROOT=Path('@PROJECT_ROOT@');STAGE=ROOT/'work/quality_control/workbook';sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'));sys.path.insert(0,str(ROOT/'work'))"
+implementation/project/work/record_exclusions/workbook/prepare.py,5,"ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps'),str(ROOT/'work')]"
+implementation/project/work/record_exclusions/workbook/prepare.py,9,"W=ROOT/'work/quality_control/workbook';O=ROOT/'outputs/quality_control/workbook';A=O/'analysis';B=Path('@INPUT_ROOT@/data_sources');PREV=ROOT/'outputs/pnsd_cleaning/analysis';sp=pd.read_csv(PREV/'site_spatial_statistics.csv').set_index('Site');oldms=pd.read_csv(PREV/'monthly_series.csv',parse_dates=['date']);flags=json.loads((ROOT/'outputs/pnsd_cleaning/PNSD/QC_protocol.json').read_text())['sentinel_values'];rev={'SCH_RB':'SCH_SUB','WAL_RB':'WAL_SUB','ZUG_RB':'ZUG_SUB'}"
+implementation/project/work/record_exclusions/workbook/redraw.py,7,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/record_exclusions/workbook/redraw.py,23,DEST=Path('@DELIVERY_ROOT@/workbook_analysis_figures')
+implementation/project/work/record_exclusions/workbook/redraw.py,237,configure();path=Path('@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/site_diagnostic.py');m=load_module(path);m.configure_style()
+implementation/project/work/record_exclusions/workbook/redraw.py,266,"src=Path('@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/breakpoint_distribution.py').read_text();body='type_palette ='+src.split('type_palette =',1)[1].split(""fig.savefig("",1)[0]"
+implementation/project/work/record_exclusions/workbook/redraw.py,300,"configure();path=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/shap_importance.py');src=path.read_text();scope=globals().copy();exec(src.split('# Load SHAP comparison tables.',1)[0],scope)"
+implementation/project/work/record_exclusions/workbook/redraw.py,307,configure();path=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/shap_dependence.py');src=path.read_text();scope=globals().copy();scope['mlines']=mpl.lines
+implementation/project/work/record_exclusions/workbook/restore_original_sequence.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/record_exclusions/workbook/restore_original_sequence.py,8,"oldinput=pd.read_csv(W/'trend_input.csv',parse_dates=['date']);ms=pd.read_csv(A/'monthly_series.csv',parse_dates=['date']);oldms=pd.read_csv(R/'outputs/pnsd_cleaning/analysis/monthly_series.csv',parse_dates=['date']);e=pd.read_csv(A/'site_eligibility.csv');prevbp=pd.read_csv(A/'breakpoints.csv');book=pd.ExcelFile('@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites/paired_date_value_measurements.xlsx',engine='calamine')"
+implementation/project/work/record_exclusions/workbook/restore_original_sequence.py,26,"lan=pd.read_excel('@INPUT_ROOT@/data_sources/LAN/LANbreakpoint/data/LAN.xlsx',engine='calamine')"
+implementation/project/work/record_exclusions/workbook/restore_original_sequence.py,85,"policy=json.loads((A.parent/'analysis_policy.json').read_text());policy['breakpoints']='Original retained observation row sequence (LAN multiple-source records are ordered chronologically to match its original integrated workbook), single linear KernelCPD min_size=2; preserve >=20 valid daily-based months. Native LDSA/PNC split at their own detected row index; synchronized pollutants split at the start of the LDSA breakpoint month.';policy['LAN_ancillary_source']='@INPUT_ROOT@/data_sources/LAN/LANbreakpoint/data/LAN.xlsx';policy['LAN_phase_boundary']='Use exact LDSA timestamp, as specified in the original LAN R script; paired analyses still use common valid calendar months.';policy['duplicate_timestamps']='Full-record trend: first original row per timestamp (original R distinct then arrange). Native phase trends retain original rows. Synchronized pollutant phases remove exact duplicate date/value rows (original sync drop_duplicates). Weekly means retain original rows.';(A.parent/'analysis_policy.json').write_text(json.dumps(policy,ensure_ascii=False,indent=2));print('OBSERVATION SEQUENCE PREPARED',len(changed),'changed fits',new.group_id.nunique(),'total')"
+implementation/project/work/redraw_fig3_all_panels.py,16,"""@ATTACHMENT_ROOT@/"""
+implementation/project/work/redraw_fig3_all_panels.py,21,"""@PROJECT_ROOT@/outputs/fig3_python_redraw"""
+implementation/project/work/redraw_fig_s9_size_mode_changes.py,9,"""@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/clean17-500"""
+implementation/project/work/redraw_fig_s9_size_mode_changes.py,12,"""@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites"""
+implementation/project/work/redraw_fig_s9_size_mode_changes.py,15,"""@PROJECT_ROOT@/outputs/fig_s9_python_redraw"""
+implementation/project/work/redraw_lnd_sto_breakpoint_context_smooth.py,26,"ROOT = Path(""@PROJECT_ROOT@"")"
+implementation/project/work/redraw_phase_copollutant_dumbbell.py,7,"ROOT = Path(""@PROJECT_ROOT@"")"
+implementation/project/work/redraw_phase_copollutant_dumbbell.py,9,"""@INPUT_ROOT@/data_sources/plotting/phase_trends/"""
+implementation/project/work/redraw_regulatory_traffic_context.py,9,"""@PROJECT_ROOT@/outputs/regulatory_traffic_context"""
+implementation/project/work/spatial_layout/check_coverage.py,4,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/spatial_layout/check_coverage.py,7,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/spatial_layout/check_coverage.py,8,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/spatial_layout/redraw.py,4,"sys.path.insert(0,""@PROJECT_ROOT@/work/ldsa_support/deps"")"
+implementation/project/work/spatial_layout/redraw.py,13,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/spatial_layout/redraw.py,15,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/spatial_layout/redraw.py,57,"text.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=text.get_fontsize(),weight='bold'))"
+implementation/project/work/spatial_statistics/prepare.py,3,"R=Path('@PROJECT_ROOT@');W=Path(__file__).parent;sys.path.insert(0,str(R/'work/ldsa_support/deps'))"
+implementation/project/work/spatial_statistics/render.py,3,"sys.path.insert(0,'@PROJECT_ROOT@/work/ldsa_support/deps')"
+implementation/project/work/spatial_statistics/render.py,10,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/spatial_statistics/render.py,12,B=Path('@DELIVERY_ROOT@/Figure1_station_data')
+implementation/project/work/spatial_statistics/render.py,23,"for text in fig.findobj(mpl.text.Text):text.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=text.get_fontsize(),weight='bold'))"
+implementation/project/work/spatial_template/redraw.py,3,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/spatial_template/redraw.py,9,m.DEST=Path('@DELIVERY_ROOT@/Figure1_workbook_sites')
+implementation/project/work/spatial_template/redraw.py,28,"t.set_fontproperties(FontProperties(fname='@FONT_ROOT@/Times New Roman Bold.ttf',size=t.get_fontsize(),weight='bold'))"
+implementation/project/work/spatial_template/redraw.py,39,src=Path('@DELIVERY_ROOT@/station_locations.xlsx')
+implementation/project/work/station_diagnostic_export/run.py,3,R=Path('@PROJECT_ROOT@');TASK=Path(__file__).parent;TASK.mkdir(exist_ok=True)
+implementation/project/work/station_diagnostic_export/run.py,4,B=Path('@DELIVERY_ROOT@')
+implementation/project/work/station_diagnostic_export/run.py,9,"source=source.replace(""O=Path('@DELIVERY_ROOT@/provider_quality_control_analysis/PNG')"",f'O=Path({str(PNG)!r})')"
+implementation/project/work/supplementary_document/build_sp.py,6,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/supplementary_document/build_sp.py,12,BASE=Path('@DELIVERY_ROOT@')
+implementation/project/work/supplementary_document/build_sp.py,13,SRC=Path('@ATTACHMENT_ROOT@/SP-65sites.docx')
+implementation/project/work/supplementary_tables/build_tables.py,6,ROOT = Path('@PROJECT_ROOT@')
+implementation/project/work/supplementary_tables/build_tables.py,18,BASE = Path('@DELIVERY_ROOT@')
+implementation/project/work/supplementary_tables/build_tables.py,20,SRC = Path('@DELIVERY_ROOT@/provider_quality_control_analysis/tables/LDSA_supplementary_tables_S1-S6_quality_control.docx')
+implementation/project/work/verify_ldsa_support.py,5,"ROOT=Path('@PROJECT_ROOT@');STAGE=ROOT/'work/ldsa_support';sys.path.insert(0,str(STAGE/'deps'))"
+implementation/project/work/workbook_processing/audit_joined.py,3,"ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps'),str(ROOT/'work')]"
+implementation/project/work/workbook_processing/audit_joined.py,20,DF=Path('@INPUT_ROOT@/data_sources/Mortality-LDSA/PNSD_inputs/wetransfer_pnsd-data-xiansheng_2026-03-11_1136/PNSD data Xiansheng/LDSA/DF1.xlsx')
+implementation/project/work/workbook_processing/continue_analysis.py,4,R=Path('@PROJECT_ROOT@');W=R/'work/workbook_processing';A=R/'outputs/workbook_processing/analysis';PY='@PYTHON@'
+implementation/project/work/workbook_processing/continue_analysis.py,11,"run(['@RSCRIPT@',str(W/'meta_monthly.R')],'meta_monthly')"
+implementation/project/work/workbook_processing/continue_analysis.py,23,"run(['@RSCRIPT@',str(W/'trends.R'),str(W/'trend_input.csv'),str(A)],'trends')"
+implementation/project/work/workbook_processing/continue_analysis.py,25,"run(['@RSCRIPT@',str(W/'sensitivity.R')],'sensitivity')"
+implementation/project/work/workbook_processing/final_tables.py,3,"ROOT=Path('@PROJECT_ROOT@');sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'))"
+implementation/project/work/workbook_processing/finalize_reference_inputs.py,3,ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps')]
+implementation/project/work/workbook_processing/finalize_reference_inputs.py,18,"p=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/weekly_observations.xlsx');book=pd.ExcelFile(p,engine='calamine');wk=pd.read_pickle(W/'weekly.pkl');features=['BC','CO','NO','NO2','O3','PM2.5','SO2','TEMP','RH','PRESS','RAD','WS','WD','RAIN'];rows=[]"
+implementation/project/work/workbook_processing/joined_sources.py,4,ROOT=Path('@PROJECT_ROOT@');B=Path('@INPUT_ROOT@/data_sources')
+implementation/project/work/workbook_processing/model.py,5,"ROOT=Path('@PROJECT_ROOT@');STAGE=ROOT/'work/workbook_processing';sys.path.insert(0,str(ROOT/'work/ldsa_support/deps'));sys.path.insert(0,str(ROOT/'work'))"
+implementation/project/work/workbook_processing/prepare.py,5,"ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps'),str(ROOT/'work')]"
+implementation/project/work/workbook_processing/prepare.py,9,"W=ROOT/'work/workbook_processing';O=ROOT/'outputs/workbook_processing';A=O/'analysis';B=Path('@INPUT_ROOT@/data_sources');PREV=ROOT/'outputs/pnsd_cleaning/analysis';sp=pd.read_csv(PREV/'site_spatial_statistics.csv').set_index('Site');oldms=pd.read_csv(PREV/'monthly_series.csv',parse_dates=['date']);flags=json.loads((ROOT/'outputs/pnsd_cleaning/PNSD/QC_protocol.json').read_text())['sentinel_values'];rev={'SCH_RB':'SCH_SUB','WAL_RB':'WAL_SUB','ZUG_RB':'ZUG_SUB'}"
+implementation/project/work/workbook_processing/prepare_word_builder.py,3,R=Path('@PROJECT_ROOT@');W=R/'work/table_formatting';W.mkdir(exist_ok=True)
+implementation/project/work/workbook_processing/rebuild_weekly_predictors.py,3,ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps')]
+implementation/project/work/workbook_processing/rebuild_weekly_predictors.py,6,"p=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/weekly_observations.xlsx');book=pd.ExcelFile(p,engine='calamine');wk=pd.read_pickle(W/'weekly.pkl');features=['BC','CO','NO','NO2','O3','PM2.5','SO2','TEMP','RH','PRESS','RAD','WS','WD','RAIN'];rows=[]"
+implementation/project/work/workbook_processing/redraw.py,7,ROOT=Path('@PROJECT_ROOT@')
+implementation/project/work/workbook_processing/redraw.py,23,DEST=Path('@DELIVERY_ROOT@/workbook_analysis_figures')
+implementation/project/work/workbook_processing/redraw.py,237,configure();path=Path('@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/site_diagnostic.py');m=load_module(path);m.configure_style()
+implementation/project/work/workbook_processing/redraw.py,266,"src=Path('@INPUT_ROOT@/data_sources/plotting/breakpoint_plots/breakpoint_distribution.py').read_text();body='type_palette ='+src.split('type_palette =',1)[1].split(""fig.savefig("",1)[0]"
+implementation/project/work/workbook_processing/redraw.py,300,"configure();path=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/shap_importance.py');src=path.read_text();scope=globals().copy();exec(src.split('# Load SHAP comparison tables.',1)[0],scope)"
+implementation/project/work/workbook_processing/redraw.py,307,configure();path=Path('@INPUT_ROOT@/data_sources/predictive_models/LG/shap_dependence.py');src=path.read_text();scope=globals().copy();scope['mlines']=mpl.lines
+implementation/project/work/workbook_processing/repair_pra_aux.py,3,"ROOT=Path('@PROJECT_ROOT@');sys.path[:0]=[str(ROOT/'work/ldsa_support/deps'),str(ROOT/'work')]"
+implementation/project/work/workbook_processing/repair_pra_aux.py,13,"pol=pd.read_excel('@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites/paired_date_value_measurements.xlsx',sheet_name='PRA_SUB',engine='calamine');native=['LDSA','Ntotal','Nucleation','Aitken','Accumulation'];base=pd.read_csv(W/'trend_input_base.csv',parse_dates=['date']);ms=pd.read_csv(A/'monthly_series.csv',parse_dates=['date']);full=pd.read_csv(A/'full_monthly_series.csv',parse_dates=['date']);bps=pd.read_csv(A/'breakpoints.csv',parse_dates=['Breakpoint','Breakpoint_timestamp']);adds=[];madds=[];fadds=[];badds=[]"
+implementation/project/work/workbook_processing/restore_original_sequence.py,3,"R=Path('@PROJECT_ROOT@');sys.path[:0]=[str(R/'work/ldsa_support/deps'),str(R/'work')]"
+implementation/project/work/workbook_processing/restore_original_sequence.py,8,"oldinput=pd.read_csv(W/'trend_input.csv',parse_dates=['date']);ms=pd.read_csv(A/'monthly_series.csv',parse_dates=['date']);oldms=pd.read_csv(R/'outputs/pnsd_cleaning/analysis/monthly_series.csv',parse_dates=['date']);e=pd.read_csv(A/'site_eligibility.csv');prevbp=pd.read_csv(A/'breakpoints.csv');book=pd.ExcelFile('@INPUT_ROOT@/data_sources/predictive_models/pollutant_data/all_sites/paired_date_value_measurements.xlsx',engine='calamine')"
+implementation/project/work/workbook_processing/restore_original_sequence.py,26,"lan=pd.read_excel('@INPUT_ROOT@/data_sources/LAN/LANbreakpoint/data/LAN.xlsx',engine='calamine')"
+implementation/project/work/workbook_processing/restore_original_sequence.py,83,"policy=json.loads((A.parent/'analysis_policy.json').read_text());policy['breakpoints']='Original retained observation row sequence (LAN multiple-source records are ordered chronologically to match its original integrated workbook), single linear KernelCPD min_size=2; preserve >=20 valid daily-based months. Native LDSA/PNC split at their own detected row index; synchronized pollutants split at the start of the LDSA breakpoint month.';policy['LAN_ancillary_source']='@INPUT_ROOT@/data_sources/LAN/LANbreakpoint/data/LAN.xlsx';policy['LAN_phase_boundary']='Use exact LDSA timestamp, as specified in the original LAN R script; paired analyses still use common valid calendar months.';policy['duplicate_timestamps']='Full-record trend: first original row per timestamp (original R distinct then arrange). Native phase trends retain original rows. Synchronized pollutant phases remove exact duplicate date/value rows (original sync drop_duplicates). Weekly means retain original rows.';(A.parent/'analysis_policy.json').write_text(json.dumps(policy,ensure_ascii=False,indent=2));print('OBSERVATION SEQUENCE PREPARED',len(changed),'changed fits',new.group_id.nunique(),'total')"
+implementation/project/work/workbook_processing/run_after_prepare.py,3,w=Path('work/workbook_processing');a=Path('outputs/workbook_processing/analysis');py='@PYTHON@'
+implementation/project/work/workbook_processing/run_after_prepare.py,10,"run(['@RSCRIPT@',str(w/'trends.R'),str(w/'trend_input.csv'),str(a)],'trends')"
+implementation/project/work/workbook_processing/run_after_prepare.py,12,"run(['@RSCRIPT@',str(w/'sensitivity.R')],'sensitivity')"

@@ -1,0 +1,6 @@
+{
+  "analysis": "@PROJECT_ROOT@/outputs/network_analysis/analysis",
+  "network_sites": 65,
+  "meta_sites": 47,
+  "breakpoint_sites": 61
+}
