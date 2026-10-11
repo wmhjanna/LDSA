@@ -34,3 +34,7 @@ python scripts/check_bcn_trends.py demo_trends
 ```
 
 Use a new output directory for each fit. The single-station calculation is expected to take seconds to a few minutes on a standard CPU. See [BCN_EXAMPLE.md](BCN_EXAMPLE.md) for the input definitions and [VALIDATION.md](VALIDATION.md) for the scope of testing.
+
+## Autocorrelation-aware bootstrap module
+
+Follow `autocorrelation_bootstrap/README.md` for its Python and R installation commands. The module requires openair 2.19.0 because the wrapper adjusts its internal bootstrap settings, meta 8.2-1, and a C++11 compiler for joint paired resampling. Run its commands from `autocorrelation_bootstrap/`.

@@ -4,6 +4,10 @@
 
 Run `scripts/run_demo.py` from the package root. This entry point uses only the included observations, deposition fractions and reference outputs. It calculates station-level LDSA and network coverage comparisons.
 
+## Autocorrelation-aware inference
+
+The `autocorrelation_bootstrap/` module starts from prepared monthly observations. Its README provides the full-record and exact-overlap moving-block analyses, joint paired bootstrap, REML synthesis and BH/BY adjustment commands. Use this module for the 60%-coverage, 143-pair inference; the general source scripts below include other processing and comparison settings. The supplied BCN monthly inputs reproduce the station examples, and the reference summaries reproduce the 47-site synthesis and 143-pair multiplicity adjustment. Refitting every station requires the corresponding monthly input records.
+
 ## Full-network source scripts
 
 The `implementation/` directory contains source scripts and templates for the study analyses. They require the complete observation files and intermediate outputs associated with each processing stage. They do not form a single-command pipeline from the example dataset.

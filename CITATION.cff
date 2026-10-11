@@ -3,7 +3,9 @@ message: "Please cite the associated manuscript and this exact software release.
 title: "LDSA analysis of a 65-station observational network"
 type: software
 version: 1.0.0
-date-released: 2026-09-22
+date-released: 2026-10-11
 license: MIT
 authors:
   - name: "LDSA study contributors"
+repository-code: "https://github.com/wmhjanna/LDSA"
+url: "https://github.com/wmhjanna/LDSA/releases/tag/v1.0.0"
